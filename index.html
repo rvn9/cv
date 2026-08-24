@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andreas Agustinus — Senior Flutter Engineer</title>
@@ -28,6 +35,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a class="btn btn-clay btn-small" href="assets/Andreas-Agustinus-CV.pdf" download>Résumé ↓</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
     <button class="nav-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </nav>

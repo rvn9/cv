@@ -1,5 +1,22 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const themeToggle = document.getElementById('themeToggle');
+const setThemeIcon = () => {
+  themeToggle.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+};
+setThemeIcon();
+themeToggle?.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+  setThemeIcon();
+});
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 navToggle?.addEventListener('click', () => {
