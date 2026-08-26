@@ -1,6 +1,8 @@
 <script setup>
 import ClayCard from './ClayCard.vue'
 import ContactCards from './contact/ContactCards.vue'
+
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -19,9 +21,9 @@ import ContactCards from './contact/ContactCards.vue'
           url: 'https://www.linkedin.com/in/andreas-agustinus/',
           name: 'Andreas Agustinus',
           title: 'Senior Flutter Engineer',
-          avatarSrc: '/assets/profile-photo.jpg',
+          avatarSrc: `${base}assets/profile-photo.jpg`,
         }"
-        :github="{ username: 'rvn9', avatarSrc: '/assets/profile-photo.jpg' }"
+        :github="{ username: 'rvn9', avatarSrc: `${base}assets/profile-photo.jpg` }"
       />
     </ClayCard>
   </section>

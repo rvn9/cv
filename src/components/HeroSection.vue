@@ -1,5 +1,7 @@
 <script setup>
 import ClayButton from './ClayButton.vue'
+
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -17,7 +19,7 @@ import ClayButton from './ClayButton.vue'
       </p>
       <div class="hero-cta">
         <ClayButton class="btn-primary" href="#contact" >Let's talk 🚀</ClayButton>
-        <ClayButton href="/assets/Andreas-Agustinus-CV.pdf" download>Download CV 📄</ClayButton>
+        <ClayButton :href="`${base}assets/Andreas-Agustinus-CV.pdf`" download>Download CV 📄</ClayButton>
       </div>
     </div>
 
@@ -25,7 +27,7 @@ import ClayButton from './ClayButton.vue'
       <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
       <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
       <div class="avatar-circle" aria-hidden="true">
-        <img class="avatar-photo" src="/assets/profile-photo.jpg" alt="" />
+        <img class="avatar-photo" :src="`${base}assets/profile-photo.jpg`" alt="" />
       </div>
     </div>
   </header>

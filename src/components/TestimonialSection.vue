@@ -1,6 +1,8 @@
 <script setup>
 import ClayCard from './ClayCard.vue'
 import ClayButton from './ClayButton.vue'
+
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -23,7 +25,7 @@ import ClayButton from './ClayButton.vue'
         </div>
         <ClayButton
           class="btn-small"
-          href="/assets/Andreas-Agustinus-Recommendation-Letter.pdf"
+          :href="`${base}assets/Andreas-Agustinus-Recommendation-Letter.pdf`"
           target="_blank"
           rel="noopener"
         >
