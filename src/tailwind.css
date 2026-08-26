@@ -1,0 +1,5 @@
+/* Theme tokens + utility classes only — no Preflight. This project already has a full,
+   hand-rolled base stylesheet (style.css); Tailwind's Preflight reset would fight it
+   (margins, headings, buttons, etc.) sitewide for the sake of a couple of new components. */
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
